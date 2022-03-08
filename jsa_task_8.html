@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsa_task_8</title>
+</head>
+<body>
+    <script>
+        /*
+        let name = {
+            fName:"shiv",
+            lName: "kumar"
+        }
+        let name_1 = {
+            fName: "prateek",
+            lName:"tyagi"
+        }
+        function printName(city){
+           console.log(this.fName + " " + this.lName + " from " + city);
+        }
+
+      // 1) call method
+        printName.call(name,"indore");
+      // call method with argument
+        printName.call(name_1,"Mumbai");
+
+      // 2) Apply method
+         printName.apply(name,["Bhopal"]);
+
+      // 3) bind method
+         let about =  printName.bind(name,"Noida");
+         about();
+      
+
+      // 4) 
+        let student ={
+            age: "20"
+        }
+        function printAge(){
+            console.log(this.age);
+        }
+        let printStudentAge = printAge.bind(student);
+        printStudentAge();
+      
+
+    function multiply(x,y){
+        console.log(x*y);
+      } 
+
+    let multiplyWithTow = multiply.bind(this,2);
+    multiplyWithTow(5); 
+    let multiplyWithThree = multiply.bind(this,3);
+    multiplyWithThree(5);  
+    */
+   let multiply = function(x){
+       return function(y){
+           console.log(x*y);
+       }
+   } 
+     let multiplyWithTow = multiply(2);
+       multiplyWithTow(5); 
+     let multiplyWithThree = multiply(3);
+       multiplyWithThree(5);   
+    </script>
+</body>
+</html>
